@@ -1,0 +1,4 @@
+add collections:
+- hits of sale;
+- the best of arrives(new comes);
+- hurry to buy(min count);

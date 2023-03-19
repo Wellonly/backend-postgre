@@ -1,0 +1,12 @@
+logfile
+
+.idea
+
+.env
+
+node_modules/
+
+build/
+ssl/
+
+yarn-error.log
