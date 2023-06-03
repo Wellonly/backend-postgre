@@ -1,5 +1,5 @@
 
-# JavaScript/Typescript, SQL, GraphQL программист-разработчик
+# JavaScript/TypeScript, SQL, GraphQL программист-разработчик
 ## Опыт работы более 10 лет (актуально на июнь 2023г.)
 ---
 ### г.Ставрополь или удаленно, частичная занятость
@@ -16,7 +16,7 @@ Telegram: https://t.me/wellfly ; E-mail: well6mail@gmail.com
 
 - Умею реализовывать информационные высоконагруженные сервисы с расширенным API backend'а с реализацией [REST](https://restfulapi.net) и [GraphQL](https://graphql.org) интерфейсов, при помощи [Axios](https://axios-http.com) и [Apollo](https://www.apollographql.com), соответственно;
 
-- Владею опытом программирования на С/С++ и умею интегрировать С/С++ программные компоненты в состав исполняемого кода на JavaScript/Typescript как в качестве бинарных библиотек, так и в формате [WebAssembly](https://webassembly.org);
+- Владею опытом программирования на С/С++ и умею интегрировать С/С++ программные компоненты в состав исполняемого кода на JavaScript/TypeScript как в качестве бинарных библиотек, так и в формате [WebAssembly](https://webassembly.org);
 
 - Имею опыт реализации пользовательских интерфейсов на [React](https://react.dev) с использованием дизайн-фраймворков [Material](https://m3.material.io), [Styled Components](https://styled-components.com);
 
