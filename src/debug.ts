@@ -28,8 +28,8 @@ export function tests() {
 // console.log("zv key2:", key2);
 
   const crypt_txt = "12345678901234567890";
-  const et = encryptText(crypt_txt, 'dfgh', 'ghgh', Buffer.alloc(12, 'dfgh'), 32, 'chacha20-poly1305');
-  const pt = decryptText(et, 'dfgh', 'ghgh', Buffer.alloc(12, 'dfgh'), 32, 'chacha20-poly1305');
+  const et = encryptText(crypt_txt, 'dfgh', 'ghgh', Buffer.alloc(16, 'dfgh'), 32, 'aes-256-cbc');
+  const pt = decryptText(et, 'dfgh', 'ghgh', Buffer.alloc(16, 'dfgh'), 32, 'aes-256-cbc');
   console.log("zv en/de:", et, et?.length , pt, crypt_txt === pt);
 
   console.log("zv test end, isDebug:", process.env.isDebug);

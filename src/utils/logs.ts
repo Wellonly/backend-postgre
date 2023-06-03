@@ -82,7 +82,9 @@ export function logAnonimousHttp(req, user) {
     return;
   }
   ra.total++;
-  console.log(`\n..zv-log: http ${user?.username || 'anonim'}; from: ${reqData.remoteAddress}; at: ${Date().toLocaleString()}; total: ${ra.total}`/* , { ...reqData } */);
+  if (ra.total%10 == 0) {
+    console.log(`\n..zv-log: http ${user?.username || 'anonim'}; from: ${reqData.remoteAddress}; at: ${Date().toLocaleString()}; total: ${ra.total}`/* , { ...reqData } */);
+  }
 };
 
 export function errorToString(err) {

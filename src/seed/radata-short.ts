@@ -7,7 +7,7 @@
 //     {collection_id: 2, product_id: 2}
 // ],
 
-import { PLACE } from './commonFolders';
+import { PLACE, FOLDER_TRASH_ID } from './commonFolders';
 
 export default {
     Collection: [
@@ -986,7 +986,7 @@ export default {
             filter: 'incoming',
         },
         {
-            id: PLACE.trash,
+            id: FOLDER_TRASH_ID,
             user_id: 1,
             priority: 999,
             place: PLACE.trash,

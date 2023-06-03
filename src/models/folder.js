@@ -1,11 +1,11 @@
 
 export default function folder(sequelize, DataTypes) {
   const Folder = sequelize.define('folder', {
-    id: {
-      primaryKey: true,
-      type: DataTypes.INTEGER,
-      allowNull: true,
-    },
+    // id: {
+    //   primaryKey: true,
+    //   type: DataTypes.INTEGER,
+    //   allowNull: true,
+    // },
     user_id: {
       type: DataTypes.INTEGER,
     },

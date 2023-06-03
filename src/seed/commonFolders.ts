@@ -15,4 +15,9 @@ export enum PLACE {
   last        // undefined or bad, must be last
 };
 
+export const FOLDER_OUTBOX_ID = 1;
+export const FOLDER_DRAFT_ID  = 2;
+export const FOLDER_BASKET_ID = 3;
+export const FOLDER_INBOX_ID  = 4;
+export const FOLDER_TRASH_ID  = 5;
 export const USER_FOLDERS_START_ID = PLACE.last;

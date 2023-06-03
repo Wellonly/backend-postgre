@@ -1,4 +1,4 @@
-import { gql } from 'apollo-server-express';
+import { gql } from 'graphql-tag'; //'apollo-server-express';
 
 export default gql`
   extend type Query {
@@ -8,7 +8,7 @@ export default gql`
   }
 
   extend type Mutation {
-    createFolder(place: Int, name: String!, icon: String, color: String, slug: String, filter: String, user_id: ID, priority: Int): Folder
+    createFolder(name: String!, place: Int, icon: String, color: String, slug: String, filter: String, user_id: ID, priority: Int): Folder
     updateFolder(id: ID!, name: String, icon: String, color: String, slug: String, filter: String, user_id: ID, priority: Int): Folder
     removeFolder(id: ID!): Boolean
   }

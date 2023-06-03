@@ -3,7 +3,6 @@ import {seedUsers} from './user';
 import shortDb from './radata-short';
 import citiesDb from './citiesdb';
 import {sleep} from '../utils/lib';
-import message from '../models/message';
 
 let errLog = [];
 
@@ -17,13 +16,13 @@ const query = `CREATE SCHEMA IF NOT EXISTS ${schema} AUTHORIZATION ${autorizatio
 }
 
 const setSequenceCounter = async (schema, tableName, value = 0) => {
-  const query = `select pg_catalog.setval('${schema}.${tableName}_id_seq', ${value}, true)`;
+  const query = `select pg_catalog.setval('${schema}.${tableName}_id_seq', ${value}, TRUE)`;
   await sequelize.query(query)
     .then(([res,meta]) => {
       // console.log("zv sql ok:", query, '; result:', { ...res[0] });
     })
     .catch(err => {
-      errmess = `\n..zv set sequence counter error: ${err.message}`;
+      const errmess = `\n..zv set sequence counter error: ${err.message}`;
       errLog.push(errmess);
       throw new Error(errmess);
     });
@@ -33,8 +32,6 @@ export async function seedDB(date) {
   // process.setUncaughtExceptionCaptureCallback(err => {
   //   console.log('\n..zv: process UncaughtException:', err);
   // });
-
-  createSchemaIfNotExist(process.env.DATABASE_SCHEMA, process.env.DATABASE_USER);
 
   errLog = [];
   const dbLog = ['User'];
@@ -69,10 +66,11 @@ async function bulkCreator(data, key) {
   await sleep(300);
   await models[key].bulkCreate(data[key], {
     validate: true,
-  }).then(res => {
+  }).then(async res => {
     const recsTotal = data[key].length;
     const names = models[key].getTableName();
-    setSequenceCounter(names.schema, names.tableName, recsTotal);
+    await sleep(100*recsTotal);
+    await setSequenceCounter(names.schema, names.tableName, recsTotal);
     console.log("\n..zv seed ok for:", key, res.length, "of", recsTotal);
   }).catch(err => {
     errLog.push(`\n..zv: seed error for:" ${key}; message: ${err.message}`);
