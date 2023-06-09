@@ -10,7 +10,7 @@ Telegram: https://t.me/wellfly ; E-mail: well6mail@gmail.com
 
 - Использую в разработке современные технологии V8 JavaScript/TS, WebAssembly, CSS, HTML, в связке с SQL, GraphQL;
 
-- Специализируюсь на [NodeJS](https://nodejs.org), [Gatsby](https://www.gatsbyjs.com), но также знаком с [ElectronJS](https://www.electronjs.org);
+- Специализируюсь на [NodeJS](https://nodejs.org), [NextJS](https://nextjs.org/), но также знаком с [Gatsby](https://www.gatsbyjs.com), [Remix](https://remix.run), [ElectronJS](https://www.electronjs.org);
 
 - Имею большой опыт работы с базами данных, в частности с [PostgreSQL](https://postgrespro.ru), использую не только SQL запросы к серверу, но и разрабатываю встроенный функционал на С и процедурном языке PL/pgSQL, для достижения максимальной эффективности взаимодействия с БД по скорости выполнения транзакций и безопасности передачи данных;
 
